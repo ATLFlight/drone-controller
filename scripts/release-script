@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo ""
+echo "Removing all gradle files..."
+rm -rf $DRONE_CONTROLLER_HOME/gradle*
+
+echo ""
+echo "Removing generated Gstreamer files../"
+rm -rf $DRONE_CONTROLLER_HOME/app/gst-build-armeabi
+
+echo ""
+echo "Done!"

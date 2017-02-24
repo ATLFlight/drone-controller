@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+android{
+    signingConfigs{
+        release{
+            storeFile file('release.keystore')
+            storePassword '******'
+            keyAlias '******'
+            keyPassword '******'
+        }
+    }
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+    defaultConfig{
+        applicationId 'atlflight.dronecontroller'
+        ndk{
+            moduleName 'streamhandler'
+        }
+        minSdkVersion 21
+        targetSdkVersion 21
+        versionCode 1
+        versionName '1.0'
+    }
+    sourceSets{
+        main{
+            jni.srcDirs=[]
+        }
+    }
+    buildTypes{
+        release{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+        debug{
+            jniDebuggable true
+            zipAlignEnabled true
+        }
+    }
+    productFlavors{
+    }
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+tasks.withType(Exec){
+    environment['PATH']=System.getenv('PATH')+':/usr/local/bin'
+    def ndkDir = System.getenv('NDK_HOME')
+    def gstDir = System.getenv('GSTREAMER_SDK_ROOT_ANDROID')
+    if (ndkDir == null || gstDir == null){
+        def localProperties = new Properties()
+        localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
+        ndkDir = localProperties.getProperty('ndk.dir')
+        gstDir = localProperties.getProperty('gst.dir')
+    }
+    if (ndkDir == null){
+        throw new GradleException('no NDK_SDK directory specified, Add ndk.dir=<PATH_TO_NDK> to local.properties or define NDK_HOME environment variable')
+    }
+    if (gstDir == null){
+        throw new GradleException('no GSTREAMER_SDK directory specified, Add gst.dir=<PATH_TO_GSTSDK> to local.properties or define GSTREAMER_SDK_ROOT_ANDROID environment variable')
+    }
+    environment['NDK_HOME']=ndkDir
+    environment['GSTREAMER_ROOT']=gstDir
+}
+dependencies{
+    compile fileTree(dir:'libs',include:['*.jar'])
+    compile fileTree(dir:"$buildDir/libs",include:'ndk-libs')
+    compile files("$buildDir/libs/ndk-libs.jar")
+    tasks.withType(JavaCompile){
+        compileTask -> compileTask.dependsOn ndkLibsToJar
+    }
+    task ndkLibsToJar(type:Zip,dependsOn:'ndkBuild',description:'create a jar of the native libs'){
+        destinationDir new File(buildDir,'libs')
+        baseName 'ndk-libs'
+        extension 'jar'
+        from(new File(buildDir,'libs')){
+            include '**/*.so'
+        }
+        into'lib/'
+    }
+    task ndkBuild (type:Exec,description:'compile JNI source via NDK'){
+        commandLine environment['NDK_HOME']+'/ndk-build','NDK_PROJECT_PATH=build','APP_BUILD_SCRIPT=src/main/jni/Android.mk','NDK_APPLICATION_MK=src/main/jni/Application.mk','GSTREAMER_JAVA_SRC_DIR=src/main/java'
+    }
+
+    compile project(':mavlink')
+    compile project(':threadwrapper')
+    compile project(':dronectrlapi')
+}

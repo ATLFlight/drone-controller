@@ -1,0 +1,7 @@
+*.apk
+*.ap_
+.gradle
+local.properties
+gradle-*.*
+build
+assets

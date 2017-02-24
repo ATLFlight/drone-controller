@@ -1,0 +1,70 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 21
+        versionCode 1
+        versionName '1.0'
+        ndk{
+            moduleName 'mavlink_native'
+        }
+    }
+    sourceSets{
+        main{
+            jni.srcDirs=[]
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+tasks.withType(Exec){
+    environment['PATH']=System.getenv('PATH')+':/usr/local/bin'
+    def ndkDir = System.getenv('NDK_HOME')
+    if (ndkDir == null){
+        def localProperties = new Properties()
+        localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
+        ndkDir = localProperties.getProperty('ndk.dir')
+    }
+    if (ndkDir == null){
+        throw new GradleException('no NDK_SDK directory specified, Add ndk.dir=<PATH_TO_NDK> to local.properties or define NDK_HOME environment variable')
+    }
+    environment['NDK_HOME']=ndkDir
+}
+
+dependencies{
+    compile fileTree(dir:'libs',include:['*.jar'])
+    compile fileTree(dir:"$buildDir/libs",include:'ndk-libs')
+    compile files("$buildDir/libs/ndk-libs.jar")
+    tasks.withType(JavaCompile){
+        compileTask -> compileTask.dependsOn ndkLibsToJar
+    }
+    task ndkLibsToJar(type:Zip,dependsOn:'ndkBuild',description:'create a jar of the native libs'){
+        destinationDir new File(buildDir,'libs')
+        baseName 'ndk-libs'
+        extension 'jar'
+        from(new File(buildDir,'libs')){
+            include '**/*.so'
+        }
+        into'lib/'
+    }
+    task ndkBuild (type:Exec,description:'compile JNI source via NDK'){
+        commandLine environment['NDK_HOME']+'/ndk-build','NDK_PROJECT_PATH=build','APP_BUILD_SCRIPT=src/main/jni/Android.mk','NDK_APPLICATION_MK=src/main/jni/Application.mk'
+    }
+    compile project(':threadwrapper')
+    compile project(':connectionlistener')
+}

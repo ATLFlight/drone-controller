@@ -1,0 +1,152 @@
+<!--
+Copyright (c) 2016 Ramakrishna Kintada. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in
+   the documentation and/or other materials provided with the
+   distribution.
+3. Neither the name ATLFlight nor the names of its contributors may be
+   used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+In addition Supplemental Terms apply.  See the SUPPLEMENTAL file.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Connection" >
+
+        <ListPreference
+            android:key="@string/pref_key_comm_interface_type"
+            android:title="Comm Interface Type"
+            android:summary="%s"
+            android:defaultValue="@string/pref_default_comm_interface_type"
+            android:dialogTitle="Comm Interface Type"
+            android:entries="@array/pref_comm_interface_options"
+            android:entryValues="@array/pref_comm_interface_options"/>
+
+        <ListPreference
+            android:key="@string/pref_key_listpreference"
+            android:title="Drone IP Address List"
+            android:summary="%s"/>
+
+        <EditTextPreference
+            android:key="@string/pref_key_drone_ip_addr"
+            android:title="Add new Drone IP address"
+            android:defaultValue="@string/pref_default_drone_ip_addr"
+            android:selectAllOnFocus="true"
+            android:inputType=""
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_mavlink_udp_port"
+            android:title="Local/Remote MAVLink UDP Port"
+            android:defaultValue="@string/pref_default_mavlink_udp_port"
+            android:selectAllOnFocus="true"
+            android:inputType=""
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_drone_bluetooth_bdaddr"
+            android:title="Drone Bluetooth Address"
+            android:defaultValue=" "
+            android:selectAllOnFocus="true"
+            android:inputType=""
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+        <EditTextPreference
+            android:key="@string/pref_key_flightctrl_cmd_tx_interval"
+            android:title="Flight Control Command Tx interval (ms)"
+            android:defaultValue="@string/pref_default_flightctrl_cmd_tx_interval"
+            android:selectAllOnFocus="true"
+            android:inputType=""
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_ping_interval"
+            android:title="Ping Interval (ms)"
+            android:defaultValue="@string/pref_default_ping_interval"
+            android:selectAllOnFocus="true"
+            android:inputType=""
+            android:singleLine="true"
+            android:maxLines="1" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_ping_timeout"
+            android:title="Ping Timeout (ms)"
+            android:defaultValue="@string/pref_default_ping_timeout"
+            android:selectAllOnFocus="true"
+            android:inputType=""
+            android:singleLine="true"
+            android:maxLines="1" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Settings" >
+
+        <ListPreference
+            android:key="@string/pref_key_joystick_type"
+            android:title="Joystick type"
+            android:summary="%s"
+            android:defaultValue="@string/pref_default_joystick_type"
+            android:dialogTitle="Joystick type"
+            android:entries="@array/pref_joystick_options"
+            android:entryValues="@array/pref_joystick_options" />
+
+        <ListPreference
+            android:key="@string/pref_yaw_gain"
+            android:title="Yaw gain"
+            android:defaultValue="@string/pref_default_yaw_gain"
+            android:dialogTitle="Yaw gain"
+            android:entries="@array/pref_yaw_gain_options"
+            android:entryValues="@array/pref_yaw_gain_options" />
+
+        <ListPreference
+            android:key="@string/pref_roll_pitch_gain"
+            android:title="Roll/Pitch gain"
+            android:defaultValue="@string/pref_default_roll_pitch_gain"
+            android:dialogTitle="Roll/Pitch gain"
+            android:entries="@array/pref_roll_pitch_gain_options"
+            android:entryValues="@array/pref_roll_pitch_gain_options" />
+
+        <ListPreference
+            android:key="@string/pref_key_background"
+            android:title="Background"
+            android:defaultValue="@string/pref_background_plain"
+            android:dialogTitle="Background"
+            android:entries="@array/pref_background_options"
+            android:entryValues="@array/pref_background_options" />
+
+        <ListPreference
+            android:key="@string/pref_key_flight_controller"
+            android:title="Flight Controller"
+            android:defaultValue="@string/pref_flight_controller_px4"
+            android:dialogTitle="Background"
+            android:entries="@array/pref_options_flight_controller"
+            android:entryValues="@array/pref_options_flight_controller" />
+    </PreferenceCategory>
+</PreferenceScreen>

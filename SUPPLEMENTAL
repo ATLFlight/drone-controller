@@ -1,0 +1,113 @@
+SUPPLEMENTAL TERMS
+This software is licensed to you under the Clear BSD License together 
+with these Supplemental Terms.  If you are using the software on behalf 
+of your employer or another legal entity, you agree to these terms on 
+their behalf as well as on your own behalf, and you represent that you 
+have the legal authority to bind such employer or other legal entity to 
+these terms.  If you do not have such authority or you or they do not 
+agree to the Clear BSD License and these Supplemental Terms, you and such 
+entity may not use this software and must delete all copies of it.  
+References below to “You” mean you and the employer or other legal entity 
+on whose behalf you are using the software.
+
+1. SCOPE OF USE OF THE LICENSED MATERIALS:  You may reproduce, prepare 
+derivative works of, and distribute the software solely in connection 
+with the implementation of (i) robotics applications or (ii) unmanned 
+multirotor aircraft that You develop, and that weighs less than 55 
+pounds.
+2. DESIGN OF YOUR PRODUCTS:  You acknowledge that the current and 
+previous copyright holders have had and will have no participation in or 
+control over – and no responsibility for – the design or assembly of Your 
+products, including drones, the integration of any of the software into 
+Your products, including drones, or the sale or marketing of Your 
+products, including drones.
+3. ASSUMPTION OF RISK:  You acknowledge that the operation of the 
+software, alone or in a product, including drones, is a potentially 
+dangerous activity and may result in significant harm to property or 
+injury or death to persons.  You agree to include on Your products 
+prominent warnings of such risks, as may be required by law or regulation 
+and as may be necessary or prudent to advise users of such risks.  You, 
+and not the current or previous copyright holders, assume all risks and 
+liabilities that may result from the use of the software, whether or not 
+modified by You and whether or not implemented in connection with a 
+reference design provided by any third party.
+4. WARRANTY DISCLAIMER:  IN ADDITION TO THE WARRANTIES DISCLAIMED IN THE 
+CLEAR BSD LICENSE, COPYRIGHTHOLDER MAKES NO WARRANTIES, EXPRESS OR 
+IMPLIED, AGAINST INFRINGEMENT, OR ANY EXPRESS OR IMPLIED WARRANTY ARISING 
+OUT OF TRADE USAGE OR OUT OF A COURSE OF DEALING OR COURSE OF 
+PERFORMANCE.  NOTHING CONTAINED IN THESE TERMS SHALL BE CONSTRUED AS (I) 
+A WARRANTY OR REPRESENTATION BY COPYRIGHTHOLDER AS TO THE VALIDITY OR 
+SCOPE OF ANY PATENT, COPYRIGHT OR OTHER INTELLECTUAL PROPERTY RIGHT OR 
+(II) A WARRANTY OR REPRESENTATION BY COPYRIGHTHOLDER THAT ANY MANUFACTURE 
+OR USE WILL BE FREE FROM INFRINGEMENT OF PATENTS, COPYRIGHTS OR OTHER 
+INTELLECTUAL PROPERTY RIGHTS OF ANY PERSON OR ENTITY.  IT SHALL BE SOLELY 
+YOUR RESPONSIBILITY TO MAKE SUCH DETERMINATION AS IS NECESSARY WITH 
+RESPECT TO THE ACQUISITION OF LICENSES UNDER PATENTS AND OTHER 
+INTELLECTUAL PROPERTY.
+5. COPYRIGHT-ONLY LICENSE:  The Clear BSD License and these Supplemental 
+Terms provide a copyright-only license to the software while these 
+Supplemental Terms and the Clear BSD License for the software are in 
+effect, and do not provide any patent licenses.  If any patent licenses 
+are needed in connection with Your products and/or the software, such 
+patent licenses must be obtained separately and in writing.  
+6. INDEMNIFICATION:  You agree to defend, indemnify and hold the current 
+and previous copyright holders, their affiliates, employees, directors, 
+agents, licensors, successors and assignees (each an “Indemnified Party”) 
+harmless from any and all claims, penalties, demands, causes of action, 
+liabilities, lawsuits, or damages, including attorneys’ fees and costs, 
+that result from or relate to the software or any product, including 
+drones, made, used, sold, imported, exported, or distributed by You which 
+uses the software or any part or derivative work thereof, even where such 
+product uses the software without modification and even where the design 
+of such product is identical to the design of any reference product, 
+including drones.  This indemnification includes, without limitation, any 
+claims for damages to property or injury or death to persons and any 
+investigation, enforcement action, civil penalty, or other action 
+conducted or cost imposed by the United States Federal Aviation 
+Administration (FAA) or any governmental entity of the United States or 
+any other government.
+If any third party asserts a claim or initiates an action against an 
+Indemnified Party for which You are responsible under this Section, the 
+Indemnified Party shall promptly notify You when it becomes aware of such 
+claim or action, provided, however, that any delay in notification shall 
+not relieve You from Your indemnification obligations under this 
+Agreement.  The Indemnified Party shall have the right to participate in 
+the defense of such claim or action, including any related settlement 
+negotiations.  No such claim or action may be settled or compromised 
+without the Indemnified Party’s express written consent, which may be 
+conditioned upon the execution of a release of all claims against the 
+Indemnified Parties by the party bringing such claim or action. 
+7. INSURANCE:  If You make or distribute drones, or participate in making 
+or distributing drones, You agree to and will maintain (throughout the 
+time You are using any of the software in connection with such drones) 
+insurance providing adequate coverage for potential product liability, 
+personal injury, property damage, and privacy claims and litigation 
+associated with such drones and/or software.
+8. GENERAL:  These Supplemental Terms, together with the Clear BSD 
+License, constitute the entire agreement of You and the current and 
+previous copyright holders with respect to the subject matter of the 
+foregoing, and supersede all prior representations, understandings and 
+agreements with respect thereto.  No amendment to the Clear BSD License 
+or these Supplemental Terms shall be binding unless in writing and signed 
+by authorized representatives of You and the current and previous 
+copyright holders.  No waiver of any term, provision, or breach of these 
+Supplemental Terms or the Clear BSD License will be effective unless it 
+is in writing and signed by an authorized representative of the current 
+and previous copyright holders.  Any such waiver shall be effective only 
+in the specific instance and for the specific purpose for which it is 
+given.  If any provision of these Supplemental Terms or the Clear BSD 
+License is held to be invalid or unenforceable, whether in whole or in 
+part, the remaining portions of such provision (if any) and the other 
+provisions of these Supplemental Terms and the Clear BSD License shall 
+remain in full force and effect, and the provision that is found to be 
+invalid or unenforceable shall remain in effect to the maximum extent 
+permitted by applicable law.  These Supplemental Terms and the Clear BSD 
+License shall be governed by and construed in accordance with the laws of 
+the State of California, U.S.A., without regard to the choice of laws 
+principles thereof.  The United Nations Convention on Contracts for the 
+International Sale of Goods shall not apply.  Any dispute, claim or 
+controversy arising out of or relating to this Agreement shall be 
+adjudicated only by a court of competent jurisdiction in San Diego, 
+California, U.S.A., and You consent to the personal jurisdiction of such 
+court for purposes of such dispute, claim or controversy.
+

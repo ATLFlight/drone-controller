@@ -1,0 +1,134 @@
+<!--
+Copyright (c) 2016 Ramakrishna Kintada. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in
+   the documentation and/or other materials provided with the
+   distribution.
+3. Neither the name ATLFlight nor the names of its contributors may be
+   used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+In addition Supplemental Terms apply.  See the SUPPLEMENTAL file.
+-->
+
+<resources>
+    <string name="app_name">DroneController</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_fpv">FPV</string>
+    <string name="title_wifi_scan">WiFi Scan</string>
+    <string name="title_connect">Connect</string>
+
+    <string name="text_arm_props">Arm Motors</string>
+    <string name="text_autonomous_mode">Autonomous mode</string>
+    <string name="text_manual_mode">Manual mode</string>
+
+    <string name="comm_interface_type_udp">UDP</string>
+    <string name="comm_interface_type_bluetooth">Bluetooth</string>
+
+    <string-array name="pref_comm_interface_options">
+        <item>@string/comm_interface_type_udp</item>
+        <item>@string/comm_interface_type_bluetooth</item>
+    </string-array>
+
+    <string-array name="pref_joystick_options">
+        <item>@string/joystick_type_slider</item>
+        <item>@string/joystick_type_full</item>
+        <item>@string/joystick_type_cross</item>
+    </string-array>
+
+    <string name="pref_key_ip_history">pref_key_ip_history</string>
+    <string-array name="ip_history_entries">
+        <item>"192.168.1.99"</item>
+    </string-array>
+
+    <string-array name="ip_history_values">
+        <item>"1"</item>
+    </string-array>
+
+    <string name="joystick_type_slider">Sliders</string>
+    <string name="joystick_type_full">Full Joystick</string>
+    <string name="joystick_type_cross">Cross-stick</string>
+
+    <string name="pref_key_comm_interface_type">comm_interface_type</string>
+    <string name="pref_default_comm_interface_type">UDP</string>
+    <string name="pref_key_drone_bluetooth_bdaddr">drone_bluetooth_bdaddr</string>
+    <string name="pref_default_drone_bluetooth_bdaddr"></string>
+    <string name="pref_key_drone_ip_addr">pref_key_drone_ip_addr</string>
+    <string name="pref_key_drone_add_ip_addr">pref_key_drone_add_ip_addr</string>
+    <string name="pref_default_drone_ip_addr">192.168.1.1</string>
+    <string name="pref_key_drone_ip_addr_history">pref_key_drone_ip_addr_history</string>
+    <string name="pref_key_listpreference">pref_key_listpreference</string>
+    <string name="pref_key_mavlink_udp_port">mavlink_udp_port</string>
+    <string name="pref_default_mavlink_udp_port">14556</string>
+    <string name="pref_key_flightctrl_cmd_tx_interval">flightctrl_cmd_tx_interval</string>
+    <string name="pref_default_flightctrl_cmd_tx_interval">20</string>
+    <string name="pref_key_ping_interval">ping_interval</string>
+    <string name="pref_default_ping_interval">1000</string>
+    <string name="pref_key_ping_timeout">ping_timeout</string>
+    <string name="pref_default_ping_timeout">1000</string>
+    <string name="pref_key_joystick_type">joystick_type</string>
+    <string name="pref_default_joystick_type">sliders</string>
+
+    <string name="pref_yaw_gain">pref_yaw_gain</string>
+    <string name="pref_default_yaw_gain">0.25</string>
+
+    <string name="pref_roll_pitch_gain">pref_roll_pitch_gain</string>
+    <string name="pref_default_roll_pitch_gain">0.45</string>
+
+    <string name="pref_key_background">pref_key_background</string>
+    <string name="pref_background_plain">plain</string>
+    <string name="pref_background_fpv_stream">fpv stream</string>
+
+    <string-array name="pref_background_options">
+        <item>"plain"</item>
+        <item>"fpv stream"</item>
+    </string-array>
+
+    <string-array name="pref_yaw_gain_options">
+        <item>"1f"</item>
+        <item>"0.25f"</item>
+    </string-array>
+
+    <string-array name="pref_roll_pitch_gain_options">
+        <item>"1f"</item>
+        <item>"0.45f"</item>
+    </string-array>
+
+    <string name="pref_key_flight_controller">pref_key_flight_controllerr</string>
+    <string name="pref_flight_controller_snav">SNAV</string>
+    <string name="pref_flight_controller_px4">PX4</string>
+    <string-array name="pref_options_flight_controller">
+        <item>SNAV</item>
+        <item>PX4</item>
+    </string-array>
+
+    <string name="menu_option_settings">Settings</string>
+    <string name="menu_option_wifi_scan">Wifi Scan</string>
+
+    <string name="transparent_orange">#99FF8000</string>
+    <string name="transparent_green">#9940FF00</string>
+    <string name="transparent_yellow">#99FFFF00</string>
+    <string name="transparent_ltgray">#99CCCCCC</string>
+    <string name="transparent_dkgray">#99444444</string>
+</resources>
